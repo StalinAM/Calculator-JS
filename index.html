@@ -24,30 +24,31 @@
     </header>
 
     <main class="calculator-container">
-        <section class="calculator-display">
-            <span class="first-value"></span>
-            <span class="secont-value"></span>
-        </section>
-        <section class="button-container">
-            <button id="clean">C</button>
-            <button id="delete">&larr;</button>
-            <button class="operator">%</button>
-            <button class="number">7</button>
-            <button class="number">8</button>
-            <button class="number">9</button>
-            <button class="operator">x</button>
-            <button class="number">4</button>
-            <button class="number">5</button>
-            <button class="number">6</button>
-            <button class="operator">-</button>
-            <button class="number">1</button>
-            <button class="number">2</button>
-            <button class="number">3</button>
-            <button class="operator">+</button>
-            <button class="number">0</button>
-            <button id="point">.</button>
-            <button id="equal">=</button>
-        </section>
+        <form name="calculator" class="button-container">
+            <input id="calculator-display" type="textfield" name="answer" value="" autocomplete="off" readonly>
+            <button id="clean" type="reset">C</button>
+            <button >&larr;</button>
+            <button type="button" value="/" onclick="document.calculator.answer.value+='/'">/</button>
+            <button type="button" value="7" onclick="document.calculator.answer.value+='7'">7</button>
+            <button type="button" value="8" onclick="document.calculator.answer.value+='8'">8</button>
+            <button type="button" value="9" onclick="document.calculator.answer.value+='9'">9</button>
+
+            <button type="button" value="*" onclick="document.calculator.answer.value+='*'">x</button>
+            <button type="button" value="4" onclick="document.calculator.answer.value+='4'">4</button>
+            <button type="button" value="5" onclick="document.calculator.answer.value+='5'">5</button>
+            <button type="button" value="6" onclick="document.calculator.answer.value+='6'">6</button>
+
+            <button type="button" value="-" onclick="document.calculator.answer.value+='-'">-</button>
+            <button type="button" value="1" onclick="document.calculator.answer.value+='1'">1</button>
+            <button type="button" value="2" onclick="document.calculator.answer.value+='2'">2</button>
+            <button type="button" value="3" onclick="document.calculator.answer.value+='3'">3</button>
+
+            <button type="button" value="+" onclick="document.calculator.answer.value+='+'">+</button>
+            <button type="button" value="0" onclick="document.calculator.answer.value+='0'">0</button>
+            <button type="button" value="." onclick="document.calculator.answer.value+='.'">.</button>
+            <button id="equal" type="button" value="="
+                onclick="document.calculator.answer.value=eval(document.calculator.answer.value).toFixed(2)">=</button>
+        </form>
     </main>
 
     <footer class="attribution">
@@ -55,7 +56,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="./main.js"></script>
+    <!-- <script src="./main.js"></script> -->
 </body>
 
 
